@@ -58,7 +58,7 @@ stage('Integration Test') {
  
  sh "minikube image load kpradeep/app-products-infra"
  } else {
- bat(/minikube image load kpradeep/app-products-infra/)
+ bat("minikube image load kpradeep/app-products-infra")
  }
  
  }
