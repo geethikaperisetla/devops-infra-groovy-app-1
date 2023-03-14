@@ -33,25 +33,7 @@ stage('Integration Test') {
  
  }
  
- //stage('Docker Build') {
- //if (isUnix()){
  
- //sh "'${mvnHome}/bin/mvn' spring-boot:build-image"
- //} else {
- //bat(/"${mvnHome}\bin\mvn" spring-boot:build-image/)
- }
- 
- //}
- 
- //stage('Docker Build') {
- //if (isUnix()){
- 
-// sh "'${mvnHome}/bin/mvn' docker-compose up"
- //} else {
- //bat(/"${mvnHome}\bin\mvn" docker-compose up /)
- //}
- 
- //}
  
  stage('Load Docker Image') {
  if (isUnix()){
@@ -82,7 +64,4 @@ stage('Integration Test') {
  }
  
  }
- 
-
-
-}
+ }
