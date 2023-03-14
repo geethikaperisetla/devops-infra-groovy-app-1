@@ -51,6 +51,48 @@ class Test1 {
 // RUN touch sample.txt 
 
 
+// Bridge - Docker -> Local
+// Macvlan - Docker -> Local
+// Overlay - Docker -> Global
+
+// Task Of an orchestrator (Docker Swarm , Kubernetes and Apache Mesos)
+
+// a. Reconciling the desired state
+// b. Replicated and Global Services
+// c. Service Discovery
+// d. Routing
+// e. Load Balancing
+// f. Scaling
+// g. SelfHealing
+// h. ZeroDowntimeDeployment
+
+// As a part of Kubernetes Master their are several daemon processes
+
+// kube-apiserver
+// kube-scheduler
+// kube-controller-manager
+
+// Kubernetes Resource or Objects
+
+
+// Kubernetes Pods
+// Kubernetes Replicaset
+//Kubernetes Deployment
+// Kubernetes Service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
