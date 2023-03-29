@@ -32,6 +32,36 @@ stage('Integration Test') {
  }
  
  }
-
-
-}
+ 
+ 
+ 
+ stage('Load Docker Image') {
+ if (isUnix()){
+ 
+ sh "minikube image load kpradeep/app-products-infra"
+ } else {
+ bat("minikube image load kpradeep/app-products-infra")
+ }
+ 
+ }
+ 
+ stage('Kubernetes Pod') {
+ if (isUnix()){
+ 
+ sh "kubectl apply -f k8s/deployment.yml"
+ } else {
+ bat("kubectl apply -f k8s/deployment.yml")
+ }
+ 
+ }
+ 
+ stage('Kubernetes Service') {
+ if (isUnix()){
+ 
+ sh "kubectl apply -f k8s/service.yml"
+ } else {
+ bat("kubectl apply -f k8s/service.yml")
+ }
+ 
+ }
+ }
